@@ -29,17 +29,14 @@ TEST(species, gelatin) {
   // A 540 lb Gelatin
   Gelatin gelatin(540);
   EXPECT_EQ(gelatin.weight(), 540);
-  EXPECT_STREQ(gelatin.shape(), NULL);
+  EXPECT_STREQ(gelatin.shape(), "sphere");
 
   // Must not be humaoid
   EXPECT_FALSE((std::is_base_of<Humanoid, Gelatin>::value));
 
-  // Should start off with "sphere" shape
-  EXPECT_STREQ(gelatin.shape(), "sphere");
-
   // Morph to "flat" shape
   gelatin.morph("flat");
-  EXPECT_STREQ(gelatin.shape(), "flat")
+  EXPECT_STREQ(gelatin.shape(), "flat");
 
   // Go back to default
   gelatin.morph();
