@@ -22,7 +22,6 @@ class Gelatin {
   double _weight;
   const char* _shape;
   const char* _defaultShape = "sphere";
-  bool _hasMorphed = false;
 
  public:
   Gelatin(double);
